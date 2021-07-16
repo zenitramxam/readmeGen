@@ -4,41 +4,26 @@ const fs= require('fs');
 const generateReadMe= (response) =>
     `# ${response.title}
 
-    ## Description
-    ${response.description}
-        
-    ## Table of Contents
-        
-    * [Installation](#installation)
-        
-    * [Usage](#usage)
-        
-    * [Contributors](#contribute)
-        
-    * [Test](#test)
-        
-    * [License](#license)
-        
-    ## Installation
-    ${response.installation}
-        
-    ## Usage
-    ${response.usage}
-    
-    ## License
-    ${response.license}
-        
-    ## Contributors
-    ${response.contribute}
-        
-    ## Test
-    ${response.test}
-        
-    ## Questions
-        
-    GitHub: https://github.com/${response.github}
-        
-    Email: ${response.email}
+    \n${response.description}
+    \n## Table of Contents
+    \n* [Installation](#installation)
+    \n* [Usage](#usage)
+    \n* [Contributors](#contribute)
+    \n* [Test](#test)
+    \n* [License](#license)
+    \n## Installation
+    \n${response.installation}
+    \n## Usage
+    \n${response.usage}
+    \n## License
+    \n${response.license}
+    \n## Contributors
+    \n${response.contribute}
+    \n## Test
+    \n${response.test}
+    \n## Questions
+    \nGitHub: https://github.com/${response.github}
+    \nEmail: ${response.email}
     `;
 
 inquirer.prompt([
@@ -89,4 +74,10 @@ inquirer.prompt([
         name: 'email',
     },
 ])
-  
+.then((response) => {
+    const readMePage= generateReadMe(response);
+
+    fs.writeFile('README.md', readMePage, (err) =>
+      err ? console.long(err) : console.log('Successfully created README.md!')
+    );
+});
