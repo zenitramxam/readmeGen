@@ -1,7 +1,8 @@
 # ReadMe Generator
     
-This command-line application is used to generate a professional README file for a new project by using node.js, npm, inquirer, and axios. 
-    
+This command-line application is used to generate a professional README file for a new project by using node.js, and inquirer.
+Video link: https://drive.google.com/file/d/1tnMIqYlnVYfJ_PdcsnYMr8WG5CX9qdBZ/view
+
 ## Table of Contents
     
 * [Installation](#installation)
