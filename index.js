@@ -1,6 +1,46 @@
 const inquirer= require('inquirer');
 const fs= require('fs');
 
+const generateReadMe= (response) =>
+    `# ${response.title}
+
+    ## Description
+    ${response.description}
+        
+    ## Table of Contents
+        
+    * [Installation](#installation)
+        
+    * [Usage](#usage)
+        
+    * [Contributors](#contribute)
+        
+    * [Test](#test)
+        
+    * [License](#license)
+        
+    ## Installation
+    ${response.installation}
+        
+    ## Usage
+    ${response.usage}
+    
+    ## License
+    ${response.license}
+        
+    ## Contributors
+    ${response.contribute}
+        
+    ## Test
+    ${response.test}
+        
+    ## Questions
+        
+    GitHub: https://github.com/${response.github}
+        
+    Email: ${response.email}
+    `;
+
 inquirer.prompt([
     {
         type: 'input',
@@ -49,3 +89,4 @@ inquirer.prompt([
         name: 'email',
     },
 ])
+  
