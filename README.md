@@ -20,7 +20,8 @@ This command-line application is used to generate a professional README file for
 2. Clone this repo into terminal.
 3. Run 'npm init -y' into command line.
 4. Run 'npm install inquirer'.
-5. Complete questions to generate your professional README.md
+5. Run 'node index.js' to launch command line application.
+6. Complete questions to generate your professional README.md
     
 ## Usage
     
