@@ -11,6 +11,7 @@ const generateReadMe= (response) =>
     \n* [Contributors](#contribute)
     \n* [Test](#test)
     \n* [License](#license)
+    \n* [Questions](#questions)
     \n## Installation
     \n${response.installation}
     \n## Usage
